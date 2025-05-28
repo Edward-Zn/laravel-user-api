@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    public function emailAddresses() 
+    protected $fillable = ['first_name', 'last_name', 'phone'];
+
+    public function emails() 
     {
-        return $this->hasMany(EmailAddress::class);
+        return $this->hasMany(Email::class);
     }
 }

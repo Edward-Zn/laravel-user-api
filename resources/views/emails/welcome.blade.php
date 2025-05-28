@@ -1,0 +1,1 @@
+Welcome user {{ $user->first_name }}
